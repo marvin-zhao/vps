@@ -114,7 +114,9 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
 -DEXTRA_CHARSETS=all \
 -DDEFAULT_CHARSET=utf8 \
 -DDEFAULT_COLLATION=utf8_general_ci \
--DWITH_EMBEDDED_SERVER=1
+-DWITH_EMBEDDED_SERVER=1 \
+-DMYSQL_UNIX_ADDR=/tmp/mysqld.sock \
+-DMYSQL_USER=mysql
 make
 
 /etc/init.d/mysql stop

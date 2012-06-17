@@ -1,0 +1,42 @@
+./configure --prefix=/usr/local/php \
+--with-config-file-path=/usr/local/php/etc \
+--with-mysql=/usr/local/mysql \
+--with-mysqli=/usr/local/mysql/bin/mysql_config \
+--with-pdo-mysql=/usr/local/mysql \
+--with-mysql-sock=\tmp\myslq.sock \
+--with-zlib \
+--with-libxml-dir=/usr \
+--enable-xml \
+--disable-rpath \
+--enable-discard-path \
+--enable-magic-quotes \
+--enable-safe-mode \
+--enable-bcmath \
+--enable-shmop \
+--enable-sysvsem \
+--enable-inline-optimization \
+--with-curl \
+--with-curlwrappers \
+--enable-mbregex \
+--enable-fastcgi \
+--enable-fpm \
+--with-fpm-user=www --with-fpm-group=www \
+--enable-force-cgi-redirect \
+--enable-mbstring \
+--with-mcrypt \
+--enable-ftp \
+--with-gd \
+--enable-gd-native-ttf \
+--with-openssl \
+--with-mhash \
+--enable-pcntl \
+--enable-sockets \
+--with-xmlrpc \
+--enable-zip \
+--enable-soap \
+--without-pear \
+--with-gettext \
+--with-mime-magic \
+--enable-exif \
+--with-snmp=/usr/local/snmp \
+--enable-calendar

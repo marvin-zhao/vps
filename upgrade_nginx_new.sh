@@ -76,16 +76,25 @@ rm -rf nginx-$nginx_version/
 tar zxvf nginx-$nginx_version.tar.gz
 cd nginx-$nginx_version/
 ./configure --user=www --group=www --prefix=/usr/local/nginx \
+--with-poll_module \
 --with-http_stub_status_module \
 --with-http_ssl_module \
 --with-http_sub_module \
 --with-http_gzip_static_module \
+--with-http_dav_module \
+--with-perl=/usr/bin/perl \
+--with-http_perl_module \
 --with-ipv6 \
---add-module=../memc-nginx-module \
---add-module=../srcache-nginx-module \
---add-module=../ngx_http_upstream_keepalive \
---add-module=../ngx_cache_purge \
---with-openssl=../../openssl-1.0.1/
+--add-module=../agentzh-memc-nginx-module-4007350 \
+--add-module=../agentzh-srcache-nginx-module-027dd06 \
+--add-module=../bpaquet-ngx_http_enhanced_memcached_module-8f9207e \
+--add-module=../FRiCKLE-ngx_cache_purge-7b6f136 \
+--with-openssl=../../openssl-1.0.1c/ \
+--http-fastcgi-temp-path=/tmp/nginx/fastcgi-tmp \
+--http-proxy-temp-path=/tmp/nginx/proxy-tmp \
+--http-client-body-temp-path=/tmp/nginx/client-body-temp \
+--http-uwsgi-temp-path=/tmp/nginx/uwsgi-temp \
+--http-scgi-temp-path=/tmp/nginx/scgi-temp
 make
 
 mv /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.old
