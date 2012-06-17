@@ -1,0 +1,6 @@
+./configure --prefix=/usr/local/snmp \
+--with-mysql \
+--with-zlib \
+--with-bzip2 \
+--with-perl-modules \
+--with-mib-modules="mibII snmpv3mibs ucd_snmp agent_mibs agentx ucd-snmp/diskio"
