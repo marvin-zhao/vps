@@ -1,0 +1,13 @@
+./configure --prefix=/usr/local/svn \
+--enable-mod-activation \
+--with-apr=/usr/local/apr/bin/apr-1-config \
+--with-apr-util=/usr/local/apr-util/bin/apu-1-config \
+--with-berkeley-db \
+--with-neon=/usr/local/neon \
+--with-ssl \
+--with-openssl \
+--with-apxs=/usr/local/apache/bin/apxs \
+--with-zlib 
+
+
+make && make install

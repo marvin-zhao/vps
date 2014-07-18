@@ -1,0 +1,17 @@
+apr
+./configure --prefix=/usr/local/apr \
+--enable-threads \
+--enable-allocator-uses-mmap \
+--enable-other-child
+
+apr-iconv
+./configure --prefix=/usr/local/apr --with-apr=/usr/local/apr
+
+apr-util
+ln -s /usr/local/berkeleydb/lib/libdb-5.3.so /usr/lib/libdb-5.3.so
+./configure --prefix=/usr/local/apr-util \
+--with-apr=/usr/local/apr/ \
+--with-crypto \
+--with-mysql=/usr/local/mysql \
+--with-berkeley-db=/usr/local/berkeleydb/include:/usr/local/berkeleydb/lib
+

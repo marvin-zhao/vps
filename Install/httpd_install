@@ -1,0 +1,28 @@
+./configure --prefix=/usr/local/apache \
+--enable-http \
+--enable-headers --enable-expires \
+--enable-mime-magic \
+--enable-proxy --enable-remoteip --enable-proxy-http --enable-proxy-fcgi \
+--enable-so \
+--enable-rewrite \
+--enable-ssl \
+--enable-deflate \
+--enable-suexec \
+--disable-userdir \
+--with-included-apr \
+--with-mpm=prefork \
+--with-ssl=/usr \
+--disable-userdir \
+--enable-file-cache \
+--enable-cache --enable-cache-disk \
+--enable-socache-memcache \
+--enable-session --enable-session-cookie \
+--enable-dav \
+--enable-dav-fs \
+--enable-dav-lock \
+--enable-vhost-alias \
+--with-included-apr --with-apr=/usr/local/apr/bin/apr-1-config \
+--with-apr-util=/usr/local/apr-util/bin/apu-1-config \
+--enable-nonportable-atomics=yes \
+--with-mpm=event \
+--enable-cgid --enable-cgi

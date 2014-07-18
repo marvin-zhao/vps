@@ -4,13 +4,12 @@
 --with-mysqli=/usr/local/mysql/bin/mysql_config \
 --with-pdo-mysql=/usr/local/mysql \
 --with-mysql-sock=\tmp\myslq.sock \
+--with-iconv-dir \
+--with-freetype-dir --with-jpeg-dir --with-png-dir \
 --with-zlib \
 --with-libxml-dir=/usr \
 --enable-xml \
 --disable-rpath \
---enable-discard-path \
---enable-magic-quotes \
---enable-safe-mode \
 --enable-bcmath \
 --enable-shmop \
 --enable-sysvsem \
@@ -18,15 +17,12 @@
 --with-curl \
 --with-curlwrappers \
 --enable-mbregex \
---enable-fastcgi \
 --enable-fpm \
 --with-fpm-user=www --with-fpm-group=www \
---enable-force-cgi-redirect \
 --enable-mbstring \
---with-mcrypt \
---enable-ftp \
 --with-gd \
 --enable-gd-native-ttf \
+--with-mcrypt \
 --with-openssl \
 --with-mhash \
 --enable-pcntl \
@@ -34,9 +30,4 @@
 --with-xmlrpc \
 --enable-zip \
 --enable-soap \
---without-pear \
---with-gettext \
---with-mime-magic \
---enable-exif \
---with-snmp=/usr/local/snmp \
---enable-calendar
+--with-gettext 
